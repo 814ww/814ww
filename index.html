@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to 814ww</title>
+    <title>814WW x Alfaroclub Shop</title>
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            margin: 0;
+            background-color: #f4f4f4;
+            transition: transform 0.5s ease;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
         h1 {
-            color: #333;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.5em;
         }
     </style>
 </head>
-<body>
-    <h1>Welcome to 814ww website</h1>
+<body onclick="showMessage()">
+    <h1>Welcome to the 814WW x Alfaroclub shop</h1>
+    <div class="message hidden">No items yet, contact via Instagram</div>
+
+    <script>
+        function showMessage() {
+            document.body.style.transform = 'translateY(-50px)';
+            const message = document.querySelector('.message');
+            message.classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
